@@ -1,0 +1,128 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+body{
+    background-image: url("./img/darkPoke.png");
+    background-repeat: repeat;
+    background-size: 250px;
+    margin: 0px;
+    border-image-repeat: repeat;
+}
+
+.div-title
+{
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1em;
+    background-color: rgb(221, 57, 57);
+    border-radius: 3%;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+}
+
+.title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.cardConteiner{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;  
+    margin: 3em;
+    margin-top: 1em;
+}
+
+.card-style
+{
+    border-radius: 5%;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    background-image: url("./img/fondoPoke.png");
+    margin: 1em;
+    padding: .1em;
+    width: 20m;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+/* En orden de HTML:
+titulo
+imagen
+id, tipo
+stats
+*/
+
+.mainTextName
+{
+    text-align: center;
+    text-shadow: -1px 0 rgb(255, 254, 254), 0 1px rgb(253, 253, 253), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+}
+
+.img-poke{
+    width: 75%;
+    border-radius: 5%;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    background-image: url("./img/fondo.png");
+}
+
+.img-poke:hover
+{
+    transform: scale(1.7);
+    border-width: 0;
+    background-image: url("./img/fondo.png");
+}
+
+.div-card
+{
+    background-color: rgb(248, 241, 245); 
+    width: 80%;
+    margin: auto;
+    border-radius: 5%;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 1em;
+}
+
+.ul-card
+{
+    list-style-type: none;  
+}
+
+.mainText
+{
+    font-size: 1.2em;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(39, 37, 37);
+}
+
+
+.li-stats
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.badStat
+{
+    color: red;
+    font-weight: 800;
+}
+
+.goodStat
+{
+    color: rgb(101, 30, 158);
+    font-weight: 800;
+}
+
+.excellentStat
+{
+    color: rgb(39, 190, 19);
+    font-weight: 800;
+}
+
