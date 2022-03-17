@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
 
+    <!--CSS + Bootstrap 4-->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
     <div class="div-title">
       <img src="./img/pokelogo.png" class="title" onclick="showAll()">
+      <br>
+      <div class="top-div-stats-colors">
+        <button class="top-btn-stats-colors" onclick="filterByStat('bad')"><li class="badStat">Bad</li></button>
+        <button class="top-btn-stats-colors" onclick="filterByStat('good')"><li class="goodStat">Good</li></button>
+          <button class="top-btn-stats-colors" onclick="filterByStat('excellent')"><li class="excellentStat">Excellent</li></button>
+          <button class="top-btn-stats-colors" onclick="filterByStat('god')"> <li class="godStat">God</li></button>
+      </div>
     </div>
     <div class="div_types_title">
       <h1 onclick="showOrHideTypeButtons()"> Types</h1>

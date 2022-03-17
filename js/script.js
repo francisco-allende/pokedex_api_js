@@ -53,6 +53,7 @@ function colorizeStats(stat)
     let bad = hastaCuarenta(stat);
     let good = hastaOchenta(stat);
     let excellent = hastaCientoVeinte(stat);
+    let god = hastaCientoSesenta(stat);
 
     if(bad)
     {
@@ -69,13 +70,18 @@ function colorizeStats(stat)
         stat = `<li class="excellentStat""> ${stat} </li>`;
         return stat;
     }
+    else if(god)
+    {
+        stat = `<li class="godStat""> ${stat} </li>`;
+        return stat;
+    }
 }
 
 function hastaCuarenta(stat)
 {
     for(let i = 10; i < 41; i++)
     {
-        if(stat.includes(i) && !hastaCientoVeinte(stat))
+        if(stat.includes(i) && !hastaCientoVeinte(stat) && !hastaCientoSesenta(stat))
         {
             return true
         }
@@ -95,9 +101,22 @@ function hastaOchenta(stat)
     return false
 }
 
+
 function hastaCientoVeinte(stat)
 {
-    for(let i = 80; i < 121; i++)
+    for(let i = 80; i < 120; i++)
+    {
+        if(stat.includes(`${i}`))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+function hastaCientoSesenta(stat)
+{
+    for(let i = 120; i <= 160; i++)
     {
         if(stat.includes(`${i}`))
         {
