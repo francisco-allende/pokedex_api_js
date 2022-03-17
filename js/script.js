@@ -1,5 +1,6 @@
 const DOMitems = document.getElementById('items');  
 
+let pokeList = []
 let pokeTypes = []
 
 function displayPokemon(pokemon)
@@ -114,6 +115,11 @@ function mayusc(string)
 function savePokeType(pokemon)
 {
     pokeTypes.push(pokemon.type);
+}
+
+function savePokeList(pokemon)
+{
+    pokeList.push(pokemon);
 }
 
 

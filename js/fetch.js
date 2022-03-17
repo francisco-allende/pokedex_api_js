@@ -34,6 +34,7 @@ function fetchPokemon()
             }
 
             displayPokemon(pokemon);
+            savePokeList(pokemon);
             savePokeType(pokemon);
         })
     }    
