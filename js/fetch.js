@@ -1,4 +1,4 @@
-//backtick is alt grl + }/] button
+//Me traigo 151, los originales
 function fetchPokemon() 
 {
     //Cada URL tiene un id. Cada fetch sera con un pokemon distinto gracias a for
@@ -34,6 +34,7 @@ function fetchPokemon()
             }
 
             displayPokemon(pokemon);
+            savePokeType(pokemon);
         })
     }    
 } 
@@ -42,3 +43,6 @@ fetchPokemon()
 //La primera en mayusc, las otras no
 const getName = (poke) => {return  mayusc(poke.name)}
 const getId = (poke) => {return poke.id}
+
+
+

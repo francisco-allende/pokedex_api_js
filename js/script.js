@@ -1,7 +1,12 @@
 const DOMitems = document.getElementById('items');  
 
+let pokeTypes = []
+
 function displayPokemon(pokemon)
 {
+    
+    pokeTypes.push(pokemon.type);
+
     const miNodo = document.createElement('div');
     const miNodoCardBody = document.createElement('div');
     const card =  document.createElement('div');
@@ -44,9 +49,9 @@ function colorizeStats(stat)
 {
     stat = mayusc(stat);
 
-    let bad = upToForty(stat);
-    let good = upToEigthy(stat);
-    let excellent = upToOneAndTwenty(stat);
+    let bad = hastaCuarenta(stat);
+    let good = hastaOchenta(stat);
+    let excellent = hastaCientoVeinte(stat);
 
     if(bad)
     {
@@ -65,9 +70,21 @@ function colorizeStats(stat)
     }
 }
 
-function upToForty(stat)
+function hastaCuarenta(stat)
 {
-    for(let i = 10; i < 40; i++)
+    for(let i = 10; i < 41; i++)
+    {
+        if(stat.includes(i) && !hastaCientoVeinte(stat))
+        {
+            return true
+        }
+    }
+    return false
+}
+
+function hastaOchenta(stat)
+{
+    for(let i = 40; i < 81; i++)
     {
         if(stat.includes(i))
         {
@@ -77,33 +94,26 @@ function upToForty(stat)
     return false
 }
 
-function upToEigthy(stat)
+function hastaCientoVeinte(stat)
 {
-    for(let i = 40; i < 80; i++)
+    for(let i = 80; i < 121; i++)
     {
-        if(stat.includes(i))
+        if(stat.includes(`${i}`))
         {
-            return true
+            return true;
         }
     }
-    return false
-}
-
-function upToOneAndTwenty(stat)
-{
-    for(let i = 80; i <= 120; i++)
-    {
-        if(stat.includes(i))
-        {
-            return true
-        }
-    }
-    return false
+    return false;
 }
 
 function mayusc(string)
 {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function savePokeType(pokemon)
+{
+    pokeTypes.push(pokemon.type);
 }
 
 

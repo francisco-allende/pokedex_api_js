@@ -12,16 +12,39 @@
     <div class="div-title">
       <img src="./img/pokelogo.png" class="title">
     </div>
+    <div class="div_types_title">
+      <h1 onclick="showOrHideTypes()"> Types</h1>
+    </div>
+    <div class="container-div-types">
+      <div class="div_types">
+        <img src="./img/1type_grass.png" onclick="filterByType(`grass`)" class="img-type">
+        <img src="./img/2type_water.png"  onclick="filterByType(`water`)" class="img-type">
+        <img src="./img/3type_fire.png"  onclick="filterByType(`fire`)" class="img-type">
+        <img src="./img/4type_electric.png"  onclick="filterByType(`electric`)" class="img-type">
+        <img src="./img/5type_rock.png"  onclick="filterByType(`rock`)" class="img-type">
+        <img src="./img/6type_ground.png"  onclick="filterByType(`ground`)" class="img-type">
+        <img src="./img/7type_ice.png"  onclick="filterByType(`ice`)" class="img-type">
+        <img src="./img/8type_psychic.png"  onclick="filterByType(`psychic`)" class="img-type">
+        <img src="./img/9type_fairy.png"  onclick="filterByType(`fairy`)" class="img-type">
+        <img src="./img/10type_dragon.png"  onclick="filterByType(`dragon`)" class="img-type">
+        <img src="./img/11type_fighting.png"  onclick="filterByType(`fighting`)" class="img-type">
+        <img src="./img/12type_normal.png"  onclick="filterByType(`normal`)" class="img-type">
+        <img src="./img/13type_bug.png"  onclick="filterByType(`bug`)" class="img-type">
+        <img src="./img/14type_poison.png"  onclick="filterByType(`poison`)" class="img-type">
+        <img src="./img/15type_steel.png"  onclick="filterByType(`steel`)" class="img-type">
+        <img src="./img/16type_ghost.png"  onclick="filterByType(`ghost`)" class="img-type"></>
+      </div>
+    </div>
     
-      
-   
+    
     <!--parent container set to grid. 1fr are each column-->
   <main id="items" class="cardConteiner">
   </main>
 
 
-  
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="./js/fetch.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/type_filters.js"></script>
   </body>
 </html>
