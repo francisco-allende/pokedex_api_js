@@ -1,7 +1,11 @@
+
+
 const DOMitems = document.getElementById('items');  
 
 let pokeList = []
 let pokeTypes = []
+
+
 
 function displayPokemon(pokemon)
 {
