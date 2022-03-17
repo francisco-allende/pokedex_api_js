@@ -2,7 +2,7 @@
 function fetchPokemon() 
 {
     //Cada URL tiene un id. Cada fetch sera con un pokemon distinto gracias a for
-    for(let i = 1; i <= 80; i++)
+    for(let i = 1; i <= 151; i++)
     {
         //Save API URL. Trae a todos. Filtro por id en la URL
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`; 
