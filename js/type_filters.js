@@ -38,6 +38,7 @@ function filterByType(string)
 function showAll()
 {
     filterByType("showAll");
+    play();
 }
 
 //Recibe por parametro un string bad, good, excellent o god. Logica similar a type
@@ -60,3 +61,9 @@ function filterByStat(string) {
         }
     }
 }
+
+function play() {
+    let audio = document.getElementById('audioTag').play();
+    audio.play();
+  }
+  

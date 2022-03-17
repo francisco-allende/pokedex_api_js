@@ -9,8 +9,13 @@
     <!--CSS + Bootstrap 4-->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <!--fix fav.ico's bug with audio-->
+    <link rel="shortcut icon" href="#">
+
   </head>
   <body>
+    <!--Titulo + botones stats-->
     <div class="div-title">
       <img src="./img/pokelogo.png" class="title" onclick="showAll()">
       <br>
@@ -21,6 +26,9 @@
           <button class="top-btn-stats-colors" onclick="filterByStat('god')"> <li class="godStat">God</li></button>
       </div>
     </div>
+    <!--Fin titulo + botones stats-->
+
+    <!--Botones segun tipo-->
     <div class="div_types_title">
       <h1 onclick="showOrHideTypeButtons()"> Types</h1>
     </div>
@@ -44,13 +52,19 @@
         <img src="./img/16type_ghost.png"  onclick="filterByType(`ghost`)" class="img-type"></>
       </div>
     </div>
+    <!--Fin botones segun tipo-->
     
     
-    <!--parent container set to grid. 1fr are each column-->
-  <main id="items" class="cardConteiner">
-  </main>
+    <!--Parent container de todas las cards. Set to grid. 1fr are each column-->
+    <main id="items" class="cardConteiner">
+    </main>
+    <!-- Fin parent container de cards-->
 
-
+    
+    <!--Audio background-->
+    <audio controls autoplay loop id="audioTag" src="./music/opening_latino.mp3" style="display: none;"></audio>
+  
+  <!--Scripts-->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="./js/fetch.js"></script>
     <script src="./js/script.js"></script>
